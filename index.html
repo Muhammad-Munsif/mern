@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JWT Auth Demo</title>
+    <!-- Tailwind CDN for quick prototyping -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-2xl bg-white p-6 rounded shadow">
+      <h1 class="text-2xl font-bold mb-4">JWT Auth Demo</h1>
+
+      <div id="auth-forms" class="grid grid-cols-2 gap-6">
+        <!-- Register -->
+        <div>
+          <h2 class="font-semibold">Register</h2>
+          <form id="registerForm" class="space-y-2 mt-2">
+            <input
+              name="name"
+              placeholder="Name"
+              required
+              class="w-full p-2 border rounded"
+            />
+            <input
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+              class="w-full p-2 border rounded"
+            />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+              class="w-full p-2 border rounded"
+            />
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">
+              Register
+            </button>
+          </form>
+        </div>
+
+        <!-- Login -->
+        <div>
+          <h2 class="font-semibold">Login</h2>
+          <form id="loginForm" class="space-y-2 mt-2">
+            <input
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+              class="w-full p-2 border rounded"
+            />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+              class="w-full p-2 border rounded"
+            />
+            <button class="bg-green-600 text-white px-4 py-2 rounded">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-6" />
+
+      <div class="flex gap-4 items-center">
+        <button
+          id="btnProfile"
+          class="px-4 py-2 bg-indigo-600 text-white rounded"
+        >
+          Get Profile (Protected)
+        </button>
+        <button id="btnLogout" class="px-4 py-2 bg-red-600 text-white rounded">
+          Logout
+        </button>
+      </div>
+
+      <pre
+        id="output"
+        class="mt-4 p-4 bg-gray-50 rounded text-sm text-gray-800"
+      ></pre>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
